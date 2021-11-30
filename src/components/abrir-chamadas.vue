@@ -54,7 +54,7 @@
 
 <script>
 
-import historicoChamadas from "../historico-chamadas/historico-chamadas.vue";
+import historicoChamadas from "./historico-chamadas.vue";
 export default {
   name: "abrirChamadas",
   components: {
@@ -88,7 +88,8 @@ export default {
   },
   findData() {
       let vm = this;
-      let url =
+      let url = ""
+      let params = null
       this.sendData(url, params, vm).then(async response => {
         this.aulas = await response.data;
       });

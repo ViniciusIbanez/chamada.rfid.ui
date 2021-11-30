@@ -56,8 +56,8 @@
 
 <script>
 
-import abrirChamadas from "../abrir-chamadas/abrir-chamadas.vue";
-import historicoChamadas from "../historico-chamadas/historico-chamadas.vue";
+import abrirChamadas from "./components/abrir-chamadas.vue";
+import historicoChamadas from "./components/historico-chamadas.vue";
 export default {
   name: "StudentArea",
   components: {

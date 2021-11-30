@@ -55,7 +55,7 @@
 
 <script>
 
-import abrirChamadas from "../abrir-chamadas/abrir-chamadas.vue";
+import abrirChamadas from "./abrir-chamadas.vue";
 export default {
   name: "historicoChamadas",
   components: {
