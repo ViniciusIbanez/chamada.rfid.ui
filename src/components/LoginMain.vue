@@ -32,12 +32,17 @@
         methods: {
             onLogin(){
                 
-            const path = "chamadarfid.ddns.net:9090/init_attendance"
+            const path = "http://3.134.97.232:1717/embedded"
+              const headers = {
+                "Content-Type": "application/json"
+              };
             axios.post(path, {
-            token: "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2MzgyMjg5MDEsImV4cCI6MTYzODMxNTMwMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiNjE4MTcyN2VkMjMxYmQwMzY0NDkyMWJkIiwianRpIjoiZTEzZTI3Y2ItODNkMy00YWYzLTgzNjgtYjI0ZmE5ZGVlMWFhIn0.sJWvtvJANUeT5DIXvw4zAH_b2xNMiBzJ9euNh9ZrOxA",
-            classroom: "6186c50e995ba73d671de797",
-        }).then((response) => {
-            this.makeToast(response); this.$parent.changeContext(response);
+              method:"<INIT>",
+              classroom: "6186c50e995ba73d671de797"
+        },{headers}).then(async(response) => {
+              const res = await response
+              // eslint-disable-next-line no-console
+              console.log(res)
         });
         }
         },
